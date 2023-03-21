@@ -6,5 +6,5 @@ FillArray(array);
 PrintArray(array);
 int[] newArray = GetSumLine(array);
 Console.WriteLine(PrintSumLine(newArray));
-//GetMinLine(newArray);
+GetMinLine(newArray);
 

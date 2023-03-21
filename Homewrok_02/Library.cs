@@ -11,7 +11,7 @@ public static class Library
         {
             for (int j = 0; j < collection.GetLength(1); j++)
             {
-                collection[i, j] = new Random().Next(0, 10);
+                collection[i, j] = new Random().Next(0,50);
             }
         }
     }
@@ -50,13 +50,16 @@ public static class Library
     }
     public static void GetMinLine(int[] array)
     {
-        int minSum = 0;
-        for (int i = 0; i < array.Length-1; i++)
+        int minSum = array[0];
+        int count = 0;
+        for (int i = 0; i < array.Length; i++)
         {
-            for (int j = 0; j < array.Length-1; j++)
+            if (array[i] < minSum)
             {
-
+                minSum = array[i];
+                count = i+1;
             }
+
         }
         Console.WriteLine(count + " строка");
     }
